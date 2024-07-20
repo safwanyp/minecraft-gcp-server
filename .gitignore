@@ -1,0 +1,11 @@
+# Terraform files
+*.tfstate
+*.tfstate.*
+.terraform/
+*.tfvars
+
+# Logs
+*.log
+
+# Sensitive data
+secrets.tf
