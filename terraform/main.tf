@@ -46,7 +46,7 @@ resource "google_compute_instance" "minecraft_server" {
 
   boot_disk {
     initialize_params {
-      image = "ubuntu-os-cloud/ubuntu-20.04-lts"
+      image = "projects/ubuntu-os-cloud/global/images/ubuntu-2004-focal-v20240614"
       size  = 20  # GB
     }
   }
@@ -64,7 +64,7 @@ resource "google_compute_instance" "minecraft_server" {
     }
   }
 
-  metadata_startup_script = file("${path.module}/startup_script.sh")
+  metadata_startup_script = file("${path.module}/../startup_script.sh")
 
   service_account {
     scopes = ["cloud-platform"]
